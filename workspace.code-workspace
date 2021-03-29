@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\ILVOLO"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "PODCAST"
+	}
+}
