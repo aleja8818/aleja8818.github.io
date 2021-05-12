@@ -3,6 +3,10 @@ body {
   padding: 0%;
 }
 
+#navegacion input[type="checkbox"], #navegacion .fa-bars, #navegacion .fa-times {
+  display: none;
+}
+
 #navegacion {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,6 +118,10 @@ input {
   margin-left: 200px;
 }
 
+.epi {
+  display: none;
+}
+
 h3 {
   font-family: 'IBM Plex Sans', sans-serif;
   color: #060A24;
@@ -138,7 +146,7 @@ p {
 
 .skew {
   position: relative;
-  background: #0251a5;
+  background: #0000A3;
 }
 
 .skew-up::before {
@@ -150,7 +158,7 @@ p {
   left: 0;
   border-style: solid;
   border-width: 0 0 100px 100vw;
-  border-color: transparent transparent #0251a5 transparent;
+  border-color: transparent transparent #0000A3 transparent;
   z-index: -1;
 }
 
@@ -163,7 +171,7 @@ p {
   bottom: -100px;
   border-style: solid;
   border-width: 100px 100vw 0 0;
-  border-color: #0251a5 transparent transparent transparent;
+  border-color: #0000A3 transparent transparent transparent;
   z-index: -1;
 }
 
@@ -237,10 +245,12 @@ p {
 }
 
 iframe {
-  height: 232px;
-  width: 584px;
   margin-bottom: 20px;
   margin-top: 20px;
+  width: 40%;
+  height: 232px;
+  border: 10px;
+  background-color: transparent;
 }
 
 .topicos {
@@ -321,14 +331,13 @@ footer div i {
   }
   label {
     display: block;
-    cursor: pointer;
   }
   .menu {
     text-align: center;
     width: 100%;
     display: none;
     margin-top: 50px;
-    background-color: blue;
+    background-color: #0000EC;
   }
   .menu a {
     display: block;
@@ -337,8 +346,56 @@ footer div i {
     text-align: left;
     color: white;
   }
-  #toggle:checked + .menu {
+  #navegacion input[type="checkbox"], #navegacion .fa-bars, #navegacion .fa-times {
     display: block;
+  }
+  #navegacion a {
+    color: #FFFFFF;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+    max-width: 200px;
+    background: #0000EC;
+    font-family: 'IBM Plex Mono', monospace;
+    -moz-transition-delay: 400ms;
+  }
+  #navegacion input[type="checkbox"], #navegacion .fa-bars, #navegacion .fa-times {
+    position: absolute;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+  }
+  #navegacion .fa-bars, #navegacion .fa-times {
+    font-size: 28px;
+    margin-top: 10px;
+    pointer-events: none;
+  }
+  #navegacion input[type="checkbox"] {
+    opacity: 0;
+  }
+  #navegacion {
+    color: black;
+    position: relative;
+    background: white;
+    min-height: 48px;
+  }
+  #navegacion nav div {
+    display: none;
+  }
+  #navegacion input:checked ~ nav div {
+    display: block;
+  }
+  #navegacion input:checked ~ .fa-bars {
+    display: none;
+  }
+  #navegacion input:not(:checked) ~ .fa-times {
+    display: none;
   }
   header {
     margin-top: 39px;
@@ -369,8 +426,7 @@ footer div i {
     color: #060A24;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 14px;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    text-align: justify;
   }
   header p input {
     background-color: #00F3BB;
@@ -388,8 +444,11 @@ footer div i {
     font-size: 36px;
     margin-left: 16px;
   }
+  .epi {
+    display: none;
+  }
   iframe {
-    height: 225px;
+    height: 232px;
     width: 298px;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -398,6 +457,7 @@ footer div i {
     margin-left: 16px;
     text-align: left;
     margin-right: 16px;
+    margin-top: 1px;
   }
   .nosotros {
     display: -webkit-box;
@@ -409,18 +469,17 @@ footer div i {
             flex-direction: column;
     margin-left: 16px;
     margin-right: 16px;
-    margin-top: 232px;
+    margin-top: 239px;
     margin-bottom: 50px;
   }
   .nosotros img {
-    width: 390px;
-    height: 660px;
+    width: 398px;
+    height: 649px;
     position: relative;
-    bottom: 20px;
   }
   .invitados {
     height: 243px;
-    width: 320px;
+    width: 380px;
   }
   #entrevistas {
     text-align: left;
